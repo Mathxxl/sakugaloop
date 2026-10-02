@@ -1,11 +1,12 @@
 @if (videoDatas$ | async) {
-  <div id="videocontainer">
-    <video class="active" controls src="{{currentUrl}}" autoplay="autoplay" (ended)="setNextVideo()"></video>
-  </div>
   <div id="commands">
-    <button (click)="onBack()">Back</button>
+    <button (click)="onBack()">Home</button>
     <a href="{{currentPost}}">Link</a>
     <button (click)="setNextVideo()">Next Video</button>
+  </div>
+
+  <div id="videocontainer">
+    <video class="active" controls src="{{currentUrl}}" autoplay="autoplay" (ended)="setNextVideo()"></video>
   </div>
 
 }
