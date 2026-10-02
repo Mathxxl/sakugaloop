@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
 import { VideoData } from '../models/VideoData';
+import corsfix from 'corsfix';
 
 @Injectable({ providedIn: 'root' })
 export class SakugaService {
@@ -13,7 +14,7 @@ export class SakugaService {
     try {
       return this.http
         .get<VideoData[]>(
-          `https://proxy.corsfix.com/?https://www.sakugabooru.com/post.json?tags=vote:3:${username}+order:random&limit=1000`,
+          `www.sakugabooru.com/post.json?tags=vote:3:${username}+order:random&limit=1000`,
         )
         .pipe(
           tap((value) =>
