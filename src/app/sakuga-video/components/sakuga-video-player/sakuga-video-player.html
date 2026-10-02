@@ -1,1 +1,11 @@
-<p>sakuga-video-player works!</p>
+@if (videoDatas$ | async) {
+  <div id="videocontainer">
+    <video class="active" controls src="{{currentUrl}}" autoplay="autoplay" (ended)="setNextVideo()"></video>
+  </div>
+  <div id="commands">
+    <button (click)="onBack()">Back</button>
+    <a href="{{currentPost}}">Link</a>
+    <button (click)="setNextVideo()">Next Video</button>
+  </div>
+
+}

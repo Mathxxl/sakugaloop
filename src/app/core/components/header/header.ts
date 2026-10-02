@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   imports: [
@@ -11,10 +11,4 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './header.html',
 })
 export class Header {
-
-  constructor(private router: Router) {}
-
-  onAddNewFaceSnap(): void {
-    this.router.navigateByUrl('facesnaps/create');
-  }
 }

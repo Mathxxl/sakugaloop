@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   imports: [],
@@ -6,4 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './about-page.scss',
   templateUrl: './about-page.html',
 })
-export class AboutPage {}
+export class AboutPage {
+  constructor(private router: Router) {}
+
+  onGoHome() {
+    this.router.navigateByUrl('/');
+  }
+}

@@ -1,4 +1,4 @@
 export class VideoData {
   id!: string;
-  url!: string;
+  file_url!: string;
 }

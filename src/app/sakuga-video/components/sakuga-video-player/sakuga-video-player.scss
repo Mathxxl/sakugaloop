@@ -1,0 +1,29 @@
+body, html, video, #videocontainer {
+  margin: 0;
+  padding:0;
+  background:#000;
+  height: 90%;
+  width: 90%;
+  overflow-y: hidden;
+  font: 15px 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*video {
+  position: fixed;
+  visibility: hidden;
+}*/
+/*video::-webkit-media-controls {
+  display:none !important;
+}*/
+
+/*video.active {
+  object-fit: contain;
+  visibility: visible;
+}*/
