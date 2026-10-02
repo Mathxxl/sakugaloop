@@ -6,6 +6,7 @@ import corsfix from 'corsfix';
 
 @Injectable({ providedIn: 'root' })
 export class SakugaService {
+
   constructor(private http: HttpClient) {}
 
   getPlaylist(username: string): Observable<VideoData[]>{
@@ -14,7 +15,7 @@ export class SakugaService {
     try {
       return this.http
         .get<VideoData[]>(
-          `https://proxy.corsfix.com/?https://www.sakugabooru.com/post.json?tags=vote:3:${username}+order:random&limit=1000`,
+          '/api/post.json?tags=vote:3:'+`${username}+order:random&limit=1000`,
         )
         .pipe(
           tap((value) =>
